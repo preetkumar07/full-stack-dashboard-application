@@ -108,67 +108,6 @@ dashboard-app/
 └── README.md           # This file
 \`\`\`
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. **Install Vercel CLI**:
-   \`\`\`bash
-   npm install -g vercel
-   \`\`\`
-
-2. **Deploy to Vercel**:
-   \`\`\`bash
-   npm run deploy:vercel
-   \`\`\`
-
-3. **Or use the Vercel Dashboard**:
-   - Connect your GitHub repository
-   - Configure environment variables
-   - Deploy automatically on push
-
-### Docker Deployment
-
-1. **Build and run with Docker Compose**:
-   \`\`\`bash
-   npm run docker:compose
-   \`\`\`
-
-2. **Or build manually**:
-   \`\`\`bash
-   npm run docker:build
-   npm run docker:run
-   \`\`\`
-
-3. **For production with Nginx**:
-   \`\`\`bash
-   docker-compose --profile production up -d
-   \`\`\`
-
-### Netlify
-
-1. **Install Netlify CLI**:
-   \`\`\`bash
-   npm install -g netlify-cli
-   \`\`\`
-
-2. **Build and deploy**:
-   \`\`\`bash
-   npm run build
-   npm run deploy:netlify
-   \`\`\`
-
-### Traditional Hosting
-
-1. **Build the application**:
-   \`\`\`bash
-   npm run build
-   \`\`\`
-
-2. **Start the production server**:
-   \`\`\`bash
-   npm start
-   \`\`\`
 
 ## 🔧 Available Scripts
 
