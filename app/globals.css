@@ -1,0 +1,175 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to vibrant yellow-based primary with sophisticated accent colors */
+  --background: oklch(1 0 0); /* #ffffff - Clean white background */
+  --foreground: oklch(0.345 0.019 258.338); /* #4b5563 - Professional gray text */
+  --card: oklch(0.984 0.024 102.212); /* #fefce8 - Warm yellow card backgrounds */
+  --card-foreground: oklch(0.345 0.019 258.338); /* #4b5563 - Card text */
+  --popover: oklch(1 0 0); /* #ffffff - Popover background */
+  --popover-foreground: oklch(0.345 0.019 258.338); /* #4b5563 - Popover text */
+  --primary: oklch(0.445 0.089 85.872); /* #a16207 - Vibrant yellow-700 primary */
+  --primary-foreground: oklch(1 0 0); /* #ffffff - White text on primary */
+  --secondary: oklch(0.627 0.265 303.9); /* #8b5cf6 - Purple accent */
+  --secondary-foreground: oklch(1 0 0); /* #ffffff - White text on secondary */
+  --muted: oklch(0.965 0.006 247.858); /* #f1f5f9 - Light muted backgrounds */
+  --muted-foreground: oklch(0.434 0.016 258.338); /* #6b7280 - Muted text */
+  --accent: oklch(0.627 0.265 303.9); /* #8b5cf6 - Purple interactive highlights */
+  --accent-foreground: oklch(1 0 0); /* #ffffff - White text on accent */
+  --destructive: oklch(0.577 0.245 27.325); /* #dc2626 - Red for errors */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff - White text on destructive */
+  --border: oklch(0.898 0.004 286.38); /* #e5e7eb - Light gray borders */
+  --input: oklch(0.984 0.002 247.858); /* #f9fafb - Input backgrounds */
+  --ring: oklch(0.445 0.089 85.872 / 0.5); /* Primary color with opacity for focus rings */
+  --chart-1: oklch(0.445 0.089 85.872); /* #a16207 - Primary chart color */
+  --chart-2: oklch(0.627 0.265 303.9); /* #8b5cf6 - Secondary chart color */
+  --chart-3: oklch(0.984 0.013 197.137); /* #ecfeff - Light cyan chart color */
+  --chart-4: oklch(0.345 0.019 258.338); /* #4b5563 - Dark gray chart color */
+  --chart-5: oklch(0.984 0.024 102.212); /* #fefce8 - Light yellow chart color */
+  --radius: 0.75rem; /* Increased border radius for modern look */
+  --sidebar: oklch(1 0 0); /* #ffffff - White sidebar background */
+  --sidebar-foreground: oklch(0.345 0.019 258.338); /* #4b5563 - Sidebar text */
+  --sidebar-primary: oklch(0.984 0.024 102.212); /* #fefce8 - Sidebar primary elements */
+  --sidebar-primary-foreground: oklch(0.345 0.019 258.338); /* #4b5563 - Sidebar primary text */
+  --sidebar-accent: oklch(0.627 0.265 303.9); /* #8b5cf6 - Sidebar accent */
+  --sidebar-accent-foreground: oklch(1 0 0); /* #ffffff - Sidebar accent text */
+  --sidebar-border: oklch(0.898 0.004 286.38); /* #e5e7eb - Sidebar borders */
+  --sidebar-ring: oklch(0.445 0.089 85.872 / 0.5); /* Primary ring for sidebar focus */
+}
+
+.dark {
+  /* Enhanced dark mode with vibrant accents */
+  --background: oklch(0.095 0 0); /* #0f0f0f - Deep dark background */
+  --foreground: oklch(0.985 0 0); /* #fafafa - Light text */
+  --card: oklch(0.145 0 0); /* #1a1a1a - Dark card backgrounds */
+  --card-foreground: oklch(0.985 0 0); /* #fafafa - Light card text */
+  --popover: oklch(0.145 0 0); /* #1a1a1a - Dark popover */
+  --popover-foreground: oklch(0.985 0 0); /* #fafafa - Light popover text */
+  --primary: oklch(0.627 0.265 303.9); /* #8b5cf6 - Purple primary in dark mode */
+  --primary-foreground: oklch(1 0 0); /* #ffffff - White text on primary */
+  --secondary: oklch(0.445 0.089 85.872); /* #a16207 - Yellow secondary in dark mode */
+  --secondary-foreground: oklch(1 0 0); /* #ffffff - White text on secondary */
+  --muted: oklch(0.195 0 0); /* #262626 - Dark muted backgrounds */
+  --muted-foreground: oklch(0.708 0 0); /* #a3a3a3 - Muted text */
+  --accent: oklch(0.627 0.265 303.9); /* #8b5cf6 - Purple accent */
+  --accent-foreground: oklch(1 0 0); /* #ffffff - White accent text */
+  --destructive: oklch(0.577 0.245 27.325); /* #dc2626 - Red destructive */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff - White destructive text */
+  --border: oklch(0.269 0 0); /* #404040 - Dark borders */
+  --input: oklch(0.195 0 0); /* #262626 - Dark input backgrounds */
+  --ring: oklch(0.627 0.265 303.9 / 0.5); /* Purple ring with opacity */
+  --chart-1: oklch(0.627 0.265 303.9); /* #8b5cf6 - Purple chart */
+  --chart-2: oklch(0.445 0.089 85.872); /* #a16207 - Yellow chart */
+  --chart-3: oklch(0.488 0.243 264.376); /* #3b82f6 - Blue chart */
+  --chart-4: oklch(0.696 0.17 162.48); /* #10b981 - Green chart */
+  --chart-5: oklch(0.769 0.188 70.08); /* #f59e0b - Orange chart */
+  --sidebar: oklch(0.145 0 0); /* #1a1a1a - Dark sidebar */
+  --sidebar-foreground: oklch(0.985 0 0); /* #fafafa - Light sidebar text */
+  --sidebar-primary: oklch(0.195 0 0); /* #262626 - Dark sidebar primary */
+  --sidebar-primary-foreground: oklch(0.985 0 0); /* #fafafa - Light sidebar primary text */
+  --sidebar-accent: oklch(0.627 0.265 303.9); /* #8b5cf6 - Purple sidebar accent */
+  --sidebar-accent-foreground: oklch(1 0 0); /* #ffffff - White sidebar accent text */
+  --sidebar-border: oklch(0.269 0 0); /* #404040 - Dark sidebar borders */
+  --sidebar-ring: oklch(0.627 0.265 303.9 / 0.5); /* Purple sidebar ring */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Added smooth transitions for all interactive elements */
+  button,
+  a,
+  [role="button"] {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Enhanced focus states with modern ring styling */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Smooth hover animations for cards */
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
+  }
+
+  /* Gradient backgrounds for enhanced visual appeal */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .gradient-card {
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--muted)) 100%);
+  }
+
+  /* Modern glass morphism effect */
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--card) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+
+  /* Pulse animation for loading states */
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px hsl(var(--primary) / 0);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+}
